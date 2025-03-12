@@ -6,7 +6,7 @@
       "email": "john.doe@example.com",
       "address": "123 Main St, Springfield",
       "profilePic": "https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg",
-      "description": "John Doe is a writer and blogger dedicated to exploring the intersection of topic 1 and topic 2. Through his blog, he aims to provide informative and engaging content for readers interested in target audience."
+      "description": "Tech enthusiast and blogger sharing insights on the latest gadgets."
     },
     {
       "id": 2,
@@ -14,23 +14,25 @@
       "email": "jane.smith@example.com",
       "address": "456 Oak Rd, Shelbyville",
       "profilePic": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
-      "description": "Jane Smith is a blogger who enjoys sharing her perspectives on various topics. Her blog is a space for her to connect with others who share her interests."
+      "description": "Lifestyle blogger covering fashion, wellness, and trending products."
     }
   ],
   "posts": [
     {
       "id": 1,
-      "title": "First Post",
-      "content": "This is the content of the first post.",
+      "title": "My Experience with the SuperPhone X",
+      "content": "I recently tried the SuperPhone X, and it's amazing! The camera is next level.",
       "user_id": 1,
-      "category_id": 1
+      "category_id": 1,
+      "product_id": 1
     },
     {
       "id": 2,
-      "title": "Second Post",
-      "content": "This is the content of the second post.",
+      "title": "Best Skincare Routine for 2025",
+      "content": "I've been using GlowSerum, and my skin has never been better. Highly recommend!",
       "user_id": 2,
-      "category_id": 2
+      "category_id": 2,
+      "product_id": 2
     }
   ],
   "comments": [
@@ -38,13 +40,19 @@
       "id": 1,
       "post_id": 1,
       "user_id": 2,
-      "content": "Great post!"
+      "content": "I've been considering this phone! How's the battery life?"
     },
     {
       "id": 2,
       "post_id": 2,
       "user_id": 1,
-      "content": "Thanks for sharing!"
+      "content": "That sounds great! Does it work for sensitive skin?"
+    },
+    {
+      "post_id": "2",
+      "user_id": 1,
+      "content": "Great",
+      "id": 3
     }
   ],
   "categories": [
@@ -55,6 +63,22 @@
     {
       "id": 2,
       "name": "Lifestyle"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "SuperPhone X",
+      "description": "A flagship smartphone with cutting-edge camera and AI features.",
+      "image": "https://s.alicdn.com/@sc04/kf/Hce2e35204e08437a80801bddfacbd1b2d.jpg_720x720q50.jpg",
+      "category": "Technology"
+    },
+    {
+      "id": 2,
+      "name": "GlowSerum",
+      "description": "A skincare serum designed to keep your skin hydrated and glowing.",
+      "image": "https://indigoprivatelabel.com/cdn/shop/products/Indigo-niacinamide-serum.jpg?v=1711484804&width=1946",
+      "category": "Lifestyle"
     }
   ]
 }
