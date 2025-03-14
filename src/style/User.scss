@@ -1,0 +1,115 @@
+@use './colors.scss' as *;
+
+// .user {
+//   min-height: 100vh;
+//   background-color: $main-color;
+//   color: $secondary-color;
+// }
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $main-color;
+
+  h2 {
+    color: $secondary-color;
+  }
+
+  a {
+    text-decoration: dashed;
+  }
+}
+
+.background-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.profile-content {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  top: -50px;
+  background-color: $main-color;
+  z-index: 1;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid $secondary-color;
+  position: absolute;
+  object-fit: cover;
+  top: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: $secondary-color;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.user-description {
+  font-size: 16px;
+  color: $secondary-color;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-details {
+  background-color: $main-color;
+  border: 1px solid $border-color;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: $secondary-color;
+}
+
+.detail-item span:first-child {
+  font-weight: bold;
+}
+
+.user-posts {
+  background-color: $main-color;
+  border: 1px solid $border-color;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.user-posts h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: $secondary-color;
+  margin-bottom: 20px;
+}
+
+.post-link {
+  display: block;
+  margin-bottom: 10px;
+  color: $secondary-color;
+  text-decoration: none;
+}
+
+.post-link:hover {
+  color: $link-hover-color;
+}
