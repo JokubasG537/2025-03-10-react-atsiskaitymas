@@ -3,25 +3,45 @@
     {
       "id": 1,
       "name": "John Doe",
-      "email": "john.doe@example.com",
+      "email": "john.doe@mail.com",
       "address": "123 Main St, Springfield",
       "profilePic": "https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg",
+      "BackgroundPic": "https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?cs=srgb&dl=pexels-sagui-andrea-200115-618833.jpg&fm=jpg",
       "description": "Tech enthusiast and blogger sharing insights on the latest gadgets."
     },
     {
       "id": 2,
       "name": "Jane Smith",
-      "email": "jane.smith@example.com",
+      "email": "jane.smith@mail.com",
       "address": "456 Oak Rd, Shelbyville",
       "profilePic": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
+      "BackgroundPic": "https://img.goodfon.com/original/1920x1200/b/2c/priroda-pirs-most-re-reka.jpg",
       "description": "Lifestyle blogger covering fashion, wellness, and trending products."
+    },
+    {
+      "id": 3,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@mail.com",
+      "address": "789 Pine St, Capital City",
+      "profilePic": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "BackgroundPic": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "description": "Travel blogger exploring hidden gems around the world."
+    },
+    {
+      "id": 4,
+      "name": "Bob Brown",
+      "email": "bob.brown@mail.com",
+      "address": "321 Elm St, Metropolis",
+      "profilePic": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "BackgroundPic": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "description": "Fitness coach and nutrition expert helping people achieve their health goals."
     }
   ],
   "posts": [
     {
       "id": 1,
       "title": "My Experience with the SuperPhone X",
-      "content": "I recently tried the SuperPhone X, and it's amazing! The camera is next level.",
+      "content": "I recently tried the SuperPhone X, and it's amazing! The camera is next level. Recommend",
       "user_id": 1,
       "category_id": 1,
       "product_id": 1
@@ -33,6 +53,30 @@
       "user_id": 2,
       "category_id": 2,
       "product_id": 2
+    },
+    {
+      "id": 3,
+      "title": "Why the EcoTrek Backpack is My Travel Essential",
+      "content": "The EcoTrek Backpack is a game-changer for travelers. It's lightweight, durable, and eco-friendly. Perfect for long trips!",
+      "user_id": 3,
+      "category_id": 3,
+      "product_id": 3
+    },
+    {
+      "id": 4,
+      "title": "PowerPulse Smartwatch: A Must-Have for Fitness Enthusiasts",
+      "content": "The PowerPulse Smartwatch has transformed my fitness routine. Its health tracking features are incredibly accurate, and the battery life is impressive.",
+      "user_id": 4,
+      "category_id": 1,
+      "product_id": 4
+    },
+    {
+      "id": 5,
+      "title": "Creating a Calm Space with ZenCandle Set",
+      "content": "The ZenCandle Set has brought so much peace to my home. The scents are soothing, and the candles burn evenly. Highly recommend for relaxation!",
+      "user_id": 2,
+      "category_id": 2,
+      "product_id": 5
     }
   ],
   "comments": [
@@ -53,6 +97,24 @@
       "user_id": 1,
       "content": "Great",
       "id": 3
+    },
+    {
+      "id": 4,
+      "post_id": 3,
+      "user_id": 4,
+      "content": "I love how eco-friendly this backpack is! Does it have enough compartments for a laptop?"
+    },
+    {
+      "id": 5,
+      "post_id": 4,
+      "user_id": 3,
+      "content": "This smartwatch sounds amazing! How does it handle outdoor workouts?"
+    },
+    {
+      "id": 6,
+      "post_id": 5,
+      "user_id": 1,
+      "content": "I’ve been looking for calming candles. How long do these burn?"
     }
   ],
   "categories": [
@@ -63,22 +125,142 @@
     {
       "id": 2,
       "name": "Lifestyle"
+    },
+    {
+      "id": 3,
+      "name": "Travel"
     }
   ],
   "products": [
+  {
+    "id": 1,
+    "name": "SuperPhone X",
+    "description": "A flagship smartphone with cutting-edge camera and AI features.",
+    "image": "https://s.alicdn.com/@sc04/kf/Hce2e35204e08437a80801bddfacbd1b2d.jpg_720x720q50.jpg",
+    "category": "Technology",
+    "isTrendingToday": true
+  },
+  {
+    "id": 2,
+    "name": "GlowSerum",
+    "description": "A skincare serum designed to keep your skin hydrated and glowing.",
+    "image": "https://indigoprivatelabel.com/cdn/shop/products/Indigo-niacinamide-serum.jpg?v=1711484804&width=1946",
+    "category": "Lifestyle",
+    "isTrendingToday": true
+  },
+  {
+    "id": 3,
+    "name": "EcoTrek Backpack",
+    "description": "A sustainable, eco-friendly backpack perfect for travel and outdoor adventures.",
+    "image": "https://image.made-in-china.com/202f0j00tUZqmMTWgNra/High-Quality-Lightweight-Large-Capacity-Backpack-Eco-Trek-Compact-Fashion-Waterproof-Business-Backpack.webp",
+    "category": "Travel",
+    "isTrendingToday": true
+  },
+  {
+    "id": 4,
+    "name": "PowerPulse Smartwatch",
+    "description": "A smartwatch with advanced health tracking and long battery life.",
+    "image": "https://riiing.com.ar/wp-content/uploads/2024/09/Power-Pulse-Smartwatch-negro-4-prendido-1024x1024.jpg",
+    "category": "Technology",
+    "isTrendingToday": true
+  },
+  {
+    "id": 5,
+    "name": "ZenCandle Set",
+    "description": "A set of aromatic candles designed to create a calming atmosphere.",
+    "image": "https://madebyzen.com/cdn/shop/files/Made_by_Zen_Winter_Spirit_2pk_Candle_Web_01.jpg?v=1722868265&width=1080",
+    "category": "Lifestyle",
+    "isTrendingToday": true
+  },
+  {
+    "id": 6,
+    "name": "AirMax Wireless Earbuds",
+    "description": "Wireless earbuds with noise cancellation and 24-hour battery life.",
+    "image": "https://crownofficesupplies.com/wp-content/uploads/2020/05/AirMax-PRO-WirelessEarbuds-2_470x470_crop_bottom.jpg",
+    "category": "Technology",
+    "isTrendingToday": true
+  },
+  {
+    "id": 7,
+    "name": "EcoFresh Water Bottle",
+    "description": "A reusable, eco-friendly water bottle with temperature control.",
+    "image": "https://m.media-amazon.com/images/I/41tTkxOUOrL._AC_UF894,1000_QL80_.jpg",
+    "category": "Lifestyle",
+    "isTrendingToday": true
+  },
+  {
+    "id": 8,
+    "name": "SolarCharge Power Bank",
+    "description": "A solar-powered power bank for charging devices on the go.",
+    "image": "https://sc04.alicdn.com/kf/Hf7fc8b057da545708d6251edb2ab8630g.jpg",
+    "category": "Technology",
+    "isTrendingToday": true
+  },
+  {
+    "id": 9,
+    "name": "FlexiYoga Mat",
+    "description": "A non-slip, eco-friendly yoga mat for all types of workouts.",
+    "image": "https://flxblyoga.com/cdn/shop/files/flxbl-1-yoga-mat-flat-water_eefdd255-5782-45ce-b153-fba784b6d360_1200x.jpg?v=1699022036",
+    "category": "Lifestyle",
+    "isTrendingToday": true
+  },
+  {
+    "id": 10,
+    "name": "TrailBlazer Hiking Boots",
+    "description": "Durable and waterproof hiking boots for outdoor adventures.",
+    "image": "https://embed.widencdn.net/img/redwing/myjfqztbt3/2000x1300px/SHA0878C_MUL_N1_1214?position=C&crop=no&color=F2F2F2",
+    "category": "Travel",
+    "isTrendingToday": true
+  },
+  {
+    "id": 11,
+    "name": "SmartHome Hub",
+    "description": "A central hub for controlling all your smart home devices.",
+    "image": "https://blog.athom.com/wp-content/uploads/2019/08/Homey-Pro-1-2000x1125.png",
+    "category": "Technology",
+    "isTrendingToday": false
+  },
+  {
+    "id": 12,
+    "name": "AromaDiffuser Pro",
+    "description": "An advanced aromatherapy diffuser with customizable settings.",
+    "image": "https://foxyavenue.com/cdn/shop/products/sun-shine-pro-light-wood-aroma-diffuser-diffusers-ankorstore-587729.jpg?v=1636904927",
+    "category": "Lifestyle",
+    "isTrendingToday": false
+  },
+  {
+    "id": 13,
+    "name": "AdventureTent Pro",
+    "description": "A lightweight, weather-resistant tent for camping enthusiasts.",
+    "image": "https://www.ferrino.it/k-components/resize/w_2000-h_2000/k-content/ferrino/themes/ferrino/html/imagebank/e-shop/photogallery-36180/1690.jpg",
+    "category": "Travel",
+    "isTrendingToday": false
+  }
+],
+  "testimonials": [
     {
       "id": 1,
-      "name": "SuperPhone X",
-      "description": "A flagship smartphone with cutting-edge camera and AI features.",
-      "image": "https://s.alicdn.com/@sc04/kf/Hce2e35204e08437a80801bddfacbd1b2d.jpg_720x720q50.jpg",
-      "category": "Technology"
+      "user_id": 1,
+      "content": "Thanks to PromoSphere, I was able to share my experience with the SuperPhone X and reach a wider audience. The platform is amazing for promoting tech products!",
+      "rating": 5
     },
     {
       "id": 2,
-      "name": "GlowSerum",
-      "description": "A skincare serum designed to keep your skin hydrated and glowing.",
-      "image": "https://indigoprivatelabel.com/cdn/shop/products/Indigo-niacinamide-serum.jpg?v=1711484804&width=1946",
-      "category": "Lifestyle"
+      "user_id": 2,
+      "content": "PromoSphere has been a game-changer for me. I’ve connected with so many people interested in skincare, and my GlowSerum reviews have gotten so much attention!",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "content": "PromoSphere helped me promote the EcoTrek Backpack to fellow travelers. It’s such a great platform for sharing travel gear recommendations!",
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "user_id": 4,
+      "content": "I’m so grateful for PromoSphere. It’s helped me showcase the PowerPulse Smartwatch to fitness enthusiasts, and the response has been incredible!",
+      "rating": 5
     }
   ]
 }

@@ -1,0 +1,61 @@
+@use '../colors.scss' as *;
+
+.trending-section {
+  color: $secondary-color;
+  text-align: center;
+
+  h2 {
+    align-self: flex-end;
+    display: flex;
+    padding-bottom: 30px;
+  }
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+  }
+}
+
+.trending-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center items vertically */
+  overflow: visible;
+  padding: 20px; /* Add some padding to the container */
+}
+
+.product-card {
+  width: 13.375rem;
+  height: 18.75rem;
+  flex-shrink: 0;
+  padding: 0;
+  background-color: $main-color;
+  background-size: cover;
+  background-position: 50%;
+  border: none;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out, margin 0.2s ease-in-out;
+  will-change: transform, margin;
+  margin: 10px; /* Add some margin to prevent overflow */
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: $button-hover-bg;
+  }
+}
+
+.product-card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #bbb;
+}

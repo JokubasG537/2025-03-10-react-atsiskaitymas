@@ -1,6 +1,5 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
 import Home from "./pages/Home.jsx";
 import Users from "./pages/Users.jsx";
 import User from "./pages/User.jsx";
@@ -14,7 +13,10 @@ import EditUser from './pages/EditUser.jsx';
 import AdminPosts from './pages/AdminPosts.jsx';
 import EditPost from './pages/EditPost.jsx';
 import AdminProducts from './pages/AdminProducts.jsx';
-import EditProduct from './pages/EditProduct.jsx'; 
+import EditProduct from './pages/EditProduct.jsx';
+import CreateUser from './pages/CreateUser.jsx'; 
+import CreatePost from './pages/CreatePost.jsx';
+import CreateProduct from './pages/CreateProduct.jsx';
 import Nav from "./components/Nav.jsx";
 import Footer from './components/Footer.jsx';
 
@@ -31,13 +33,15 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<Product />} />
 
-
         <Route path="/admin" element={<AdminPanel />} />
         <Route path="/admin/users" element={<AdminUsers />} />
+        <Route path="/admin/users/new" element={<CreateUser />} />
         <Route path="/admin/users/:id/edit" element={<EditUser />} />
         <Route path="/admin/posts" element={<AdminPosts />} />
+        <Route path="/admin/posts/new" element={<CreatePost />} />
         <Route path="/admin/posts/:id/edit" element={<EditPost />} />
         <Route path="/admin/products" element={<AdminProducts />} />
+        <Route path="/admin/products/new" element={<CreateProduct />} />
         <Route path="/admin/products/:id/edit" element={<EditProduct />} />
       </Routes>
       <Footer />

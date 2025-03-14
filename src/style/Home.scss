@@ -1,0 +1,11 @@
+@use './colors' as *;
+
+.home {
+  margin: auto;
+  background-color: $main-color;
+}
+
+.trending-testimonials-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
