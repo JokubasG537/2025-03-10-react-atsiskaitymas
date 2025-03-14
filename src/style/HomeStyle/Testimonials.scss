@@ -1,0 +1,68 @@
+@use '../colors.scss' as *;
+
+#testimonials-container {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  margin: 0 auto;
+}
+
+.testimonials-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  padding: 20px;
+}
+
+h2 {
+  display: flex;
+  align-self: flex-end;
+  padding-bottom: 35px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $border-color;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, margin 0.2s ease-in-out;
+  backdrop-filter: blur(8px);
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: $button-hover-bg;
+  }
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.testimonial-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  color: $secondary-color;
+}
+
+.rating {
+  margin-top: 10px;
+  color: gold;
+}
+
+.swiper-pagination-bullet {
+  background: transparent;
+}
