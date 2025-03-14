@@ -22,6 +22,8 @@ const User = () => {
         <img src={userData?.profilePic} alt={userData?.name} className="profile-picture" />
         <h1 className="user-name">{userData?.name}</h1>
         <p className="user-description">{userData?.description}</p>
+
+        <div className="details-posts-wrapper">
         <div className="user-details">
           <h2>User's Info:</h2>
           <div className="detail-item">
@@ -45,6 +47,7 @@ const User = () => {
             <p>No posts found for this user.</p>
           )}
         </div>
+</div>
       </div>
     </div>
   );
