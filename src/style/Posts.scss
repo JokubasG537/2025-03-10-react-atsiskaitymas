@@ -1,0 +1,75 @@
+@use '../style/colors.scss' as *;
+
+.posts {
+  background-color: $main-color;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  h2 {
+    color: $secondary-color;
+    margin-bottom: 10px;
+    display: flex;
+    align-self: center;
+  }
+
+  .posts-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 800px;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    .post-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      transition: transform 0.2s ease-in-out;
+      will-change: transform;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        text-decoration: none;
+        color: $button-text;
+        width: 100%;
+        border: 1px solid $border-color;
+        padding: 8px 10px;
+        box-sizing: border-box;
+        justify-content: space-between;
+
+        .title-author-wrapper {
+          display: flex;
+          flex-direction: column;
+        }
+
+
+        .post-title {
+          font-weight: bold;
+          font-size: 16px;
+        }
+
+        .post-author, .post-category {
+          font-size: 14px;
+          color: $secondary-color;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
