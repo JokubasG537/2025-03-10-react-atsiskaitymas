@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import useFetchData from "../components/hooks/fetchData";
 import { Link } from "react-router-dom";
+import TextareaAutosize from "react-textarea-autosize";
+import "../style/PostStyle.scss";
 
 const Post = () => {
   const { id } = useParams();
@@ -37,11 +39,11 @@ const Post = () => {
   };
 
   if (postLoading || usersLoading || categoriesLoading || commentsLoading || productsLoading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   if (postError || usersError || categoriesError || commentsError || productsError) {
-    return <div>Error loading data!</div>;
+    return <div className="error">Error loading data!</div>;
   }
 
   const user = usersData?.find((user) => user.id === postData?.user_id);
@@ -49,51 +51,66 @@ const Post = () => {
   const relatedProduct = productsData?.find((product) => product.id === postData?.product_id);
 
   return (
-    <div>
-      <Link to={`/users/${user.id}`} className="profile-wrapper">
-        <img src={user.profilePic} alt="user profile picture" />
-        {user && <p>{user.name}</p>}
-      </Link>
+    <div className="post-page">
+      <div className="post-header">
+        <div className="header-left">
+          <Link to={`/users/${user.id}`} className="profile-link">
+            <img src={user.profilePic} alt="user profile" className="user-avatar" />
+            <p className="user-name">{user.name}</p>
+          </Link>
+        </div>
+        {category && <p className="category-name">{category.name}</p>}
+      </div>
 
-      {category && <p>Category: {category.name}</p>}
-      <p>{postData?.content}</p>
+      <div className="post-body">
+        <p className="post-content">{postData?.content}</p>
+      </div>
 
       {relatedProduct && (
-        <div>
+        <div className="related-product">
           <h2>Related Product</h2>
           <Link to={`/products/${relatedProduct.id}`} className="product-link">
-            <img src={relatedProduct.image} alt={relatedProduct.name} style={{ width: "150px" }} />
+            <img src={relatedProduct.image} alt={relatedProduct.name} className="product-image" />
             <p>{relatedProduct.name}</p>
           </Link>
         </div>
       )}
 
-      <h2>Comments</h2>
-      {comments.length > 0 ? (
-        comments.map((comment) => {
-          const commenter = usersData?.find((user) => user.id === comment.user_id);
-          return (
-            <div key={comment.id} className="comment-wrapper">
-              {commenter && (
-                <Link to={`/users/${commenter.id}`} className="commenter-profile">
-                  <img src={commenter.profilePic} alt="commenter profile" className="commenter-pic" />
-                  <strong>{commenter.name}</strong>
-                </Link>
-              )}
-              <p>{comment.content}</p>
-            </div>
-          );
-        })
-      ) : (
-        <p>No comments yet.</p>
-      )}
+      <div className="comments-section">
+        <h2>Comments</h2>
+        {comments.length > 0 ? (
+          comments.map((comment) => {
+            const commenter = usersData?.find((user) => user.id === comment.user_id);
+            return (
+              <div key={comment.id} className="comment-item">
+                {commenter && (
+                  <Link to={`/users/${commenter.id}`} className="commenter-profile">
+                    <img src={commenter.profilePic} alt="commenter profile" className="commenter-avatar" />
+                    <strong>{commenter.name}</strong>
+                  </Link>
+                )}
+                <p>{comment.content}</p>
+              </div>
+            );
+          })
+        ) : (
+          <p>No comments yet.</p>
+        )}
+      </div>
 
-      <form onSubmit={handleCommentSubmit}>
-        <textarea value={commentContent} onChange={(e) => setCommentContent(e.target.value)} placeholder="Write a comment..." />
-        <button type="submit">Post Comment</button>
+      <form onSubmit={handleCommentSubmit} className="comment-form">
+        <TextareaAutosize
+          value={commentContent}
+          onChange={(e) => setCommentContent(e.target.value)}
+          placeholder="Write a comment..."
+          minRows={3}
+          maxRows={6}
+          className="comment-input"
+        />
+        <button type="submit" className="submit-btn">Post Comment</button>
       </form>
 
-      <button onClick={() => window.history.back()}>Back to Posts</button>
+      <button onClick={() => window.history.back()} className="back-btn">Back to Posts</button>
     </div>
   );
 };
